@@ -1,0 +1,44 @@
+*.swp
+
+
+# Node dependencies
+node_modules/
+.yarn/
+
+# Output directories
+dist/
+coverage/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Test snapshots / temp
+*.snap
+*.tsbuildinfo
+
+# Environment and credentials
+.env
+.env.local
+
+# Binaries / archives
+*.tar.*
+*.zip
+.wrangler
+.dev.*
+
+# pnpm
+.pnpm-debug.log
+.pnpm-store/
+shrinkwrap.yaml
+
+# pnpm workspace
+.pnpm-workspace.yaml
+
+# pnpm state
+.pnpm/

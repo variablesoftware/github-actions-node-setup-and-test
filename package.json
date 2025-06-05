@@ -1,0 +1,17 @@
+{
+  "name": "github-actions-setup-and-test",
+  "version": "0.0.1",
+  "description": "Reusable composite GitHub Action for setup and test steps.",
+  "main": "action.yml",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release": "^23.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^9.0.0"
+  }
+}
