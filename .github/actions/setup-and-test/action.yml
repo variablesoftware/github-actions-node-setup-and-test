@@ -12,6 +12,11 @@ runs:
         pwd && ls -al && cat package.json
       shell: bash
 
+    - name: Initial Debug, Show git status and remotes
+      run: |
+        git --version && git status && git remote -v && git log --oneline --decorate --graph -n 10
+      shell: bash
+
     - name: Checkout code
       uses: actions/checkout@v4.2.2
       with:
@@ -20,6 +25,10 @@ runs:
     - name: Post checkout Debug Show working directory and package.json
       run: |
         pwd && ls -al && cat package.json
+      shell: bash
+
+    - name: Post checkout Debug, Show git status and remotes
+      run: git --version && git status && git remote -v && git log --oneline --decorate --graph -n 10
       shell: bash
 
     # - name: PNPM
