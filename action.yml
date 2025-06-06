@@ -22,29 +22,24 @@ runs:
       with:
         fetch-depth: 0
         
-    - name: Post checkout Debug Show working directory and package.json
-      run: |
-        pwd && ls -al && cat package.json
-      shell: bash
+    # - name: Post checkout Debug Show working directory and package.json
+    #   run: |
+    #     pwd && ls -al && cat package.json
+    #   shell: bash
 
-    - name: Post checkout Debug, Show git status and remotes
-      run: git --version && git status && git remote -v && git log --oneline --decorate --graph -n 10
-      shell: bash
-
-    # - name: PNPM
-      # run: corepack enable && corepack prepare pnpm@latest --activate
-      # run: corepack enable && corepack prepare pnpm@latest --activate
-      # shell: bash
+    # - name: Post checkout Debug, Show git status and remotes
+    #   run: git --version && git status && git remote -v && git log --oneline --decorate --graph -n 10
+    #   shell: bash
 
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
         version: latest
 
-    - name: Debug after pnpm action setup, Show working directory and package.json
-      run: |
-        pwd && ls -al && cat package.json
-      shell: bash
+    # - name: Debug after pnpm action setup, Show working directory and package.json
+    #   run: |
+    #     pwd && ls -al && cat package.json
+    #   shell: bash
 
     - name: Setup CI, Build and Test Package
       uses: actions/setup-node@v4
@@ -52,10 +47,10 @@ runs:
         node-version: "lts/*"
         cache: "pnpm"
 
-    - name: Debug post node, Show working directory and package.json
-      run: |
-        pwd && ls -al && cat package.json
-      shell: bash
+    # - name: Debug post node, Show working directory and package.json
+    #   run: |
+    #     pwd && ls -al && cat package.json
+    #   shell: bash
 
     - name: Debug pnpm environment
       run: |
@@ -67,23 +62,19 @@ runs:
         env | grep -E 'PNPM|NPM|NODE|PATH'
       shell: bash
 
-    # - name: pnpm help
-    #   run: pnpm help
+    # - name: Debug Show working directory and package.json
+    #   run: |
+    #     pwd && ls -al && cat package.json
     #   shell: bash
-
-    - name: Debug Show working directory and package.json
-      run: |
-        pwd && ls -al && cat package.json
-      shell: bash
 
     - name: Install dependencies
       run: pnpm install --frozen-lockfile --loglevel debug
       shell: bash
 
-    - name: Debug post install, Show working directory and package.json
-      run: |
-        pwd && ls -al && cat package.json
-      shell: bash
+    # - name: Debug post install, Show working directory and package.json
+    #   run: |
+    #     pwd && ls -al && cat package.json
+    #   shell: bash
 
     - name: Run lint
       run: |
