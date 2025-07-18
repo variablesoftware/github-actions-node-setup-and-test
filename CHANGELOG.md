@@ -1,3 +1,5 @@
+## [1.1.2](https://github.com/variablesoftware/github-actions-node-setup-and-test/compare/v1.1.1...v1.1.2) (2025-07-18)
+
 ## [1.1.1](https://github.com/variablesoftware/github-actions-node-setup-and-test/compare/v1.1.0...v1.1.1) (2025-06-20)
 
 # [1.1.0](https://github.com/variablesoftware/github-actions-node-setup-and-test/compare/v1.0.4...v1.1.0) (2025-06-20)
